@@ -8,6 +8,7 @@ from resources.token import TokenResource, TokenRefreshResource
 from resources.user import UserListResource, UserRegistryResource
 from models.user import User
 
+
 app = Flask(__name__)
 # Configuration for the APP
 app.config.from_object(Config)
@@ -33,4 +34,4 @@ api.add_resource(TokenRefreshResource, "/refresh")
 
 
 if __name__ ==  "__main__":
-    app.run(port=5000, debug=True)
+    app.run(port=5000, debug=Config.FLASK_DEBUG)
